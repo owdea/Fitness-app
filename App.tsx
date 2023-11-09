@@ -1,28 +1,12 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {Button, View} from 'react-native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import TrackWorkoutScreen from './src/pages/TrackWorkoutScreen';
-
-function HomeScreen({navigation}: any) {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Button
-        onPress={() => navigation.navigate('Notifications')}
-        title="Go to notifications"
-      />
-    </View>
-  );
-}
-
-function NotificationsScreen({navigation}: any) {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Button onPress={() => navigation.goBack()} title="Go back home" />
-    </View>
-  );
-}
+import HomeScreen from './src/pages/HomePage';
+import ExcersiseGroupPage from './src/pages/ExcersiseGroupPage';
+import ExcersiseListPage from './src/pages/ExcersiseListPage';
+import CalendarPage from './src/pages/CalendarPage';
 
 const Drawer = createDrawerNavigator();
 
@@ -31,8 +15,16 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-        <Drawer.Screen name="TrackWorkout" component={TrackWorkoutScreen} />
+        <Drawer.Screen name="Track workout" component={TrackWorkoutScreen} />
+        <Drawer.Screen
+          name="Groups of excersises"
+          component={ExcersiseGroupPage}
+        />
+        <Drawer.Screen
+          name="List of excersises"
+          component={ExcersiseListPage}
+        />
+        <Drawer.Screen name="Calendar" component={CalendarPage} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
