@@ -4,8 +4,8 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import TrackWorkoutScreen from './src/pages/TrackWorkoutScreen';
 import HomeScreen from './src/pages/HomePage';
-import ExcersiseGroupPage from './src/pages/ExcersiseGroupPage';
-import ExcersiseListPage from './src/pages/ExcersiseListPage';
+import ExerciseGroupPage from './src/pages/ExerciseGroupPage';
+import ExcersiseListPage from './src/pages/ExerciseListPage';
 import CalendarPage from './src/pages/CalendarPage';
 
 const Drawer = createDrawerNavigator();
@@ -18,7 +18,7 @@ export default function App() {
         <Drawer.Screen name="Track workout" component={TrackWorkoutScreen} />
         <Drawer.Screen
           name="Groups of excersises"
-          component={ExcersiseGroupPage}
+          component={ExerciseGroupPage}
         />
         <Drawer.Screen
           name="List of excersises"

@@ -1,7 +1,7 @@
 import {Button, Modal, Text, View} from 'react-native';
 import * as React from 'react';
 
-function CreateNewExcersise(props: any) {
+function CreateNewExerciseModal(props: any) {
   return (
     <Modal
       visible={props.isCreateNewExerciseModalVisible}
@@ -24,4 +24,4 @@ function CreateNewExcersise(props: any) {
   );
 }
 
-export default CreateNewExcersise;
+export default CreateNewExerciseModal;
