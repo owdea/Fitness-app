@@ -17,13 +17,11 @@ function ExerciseGroupPage() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Exercise Group Page</Text>
+      <Text>TODO: rozklikávací rozklikávací bloky</Text>
+      {/*Create new group section*/}
       <Button
         title="Create new exercise group"
         onPress={() => setIsCreateNewExerciseGroupModalVisible(true)}
-      />
-      <Button
-        title="Open exercise group detail"
-        onPress={() => setIsExerciseGroupDetailModalVisible(true)}
       />
       <CreateNewExerciseGroupModal
         isCreateNewExerciseGroupModalVisible={
@@ -32,6 +30,11 @@ function ExerciseGroupPage() {
         setIsCreateNewExerciseGroupModalVisible={
           setIsCreateNewExerciseGroupModalVisible
         }
+      />
+      {/*Open detail about exercise group section*/}
+      <Button
+        title="Open exercise group detail"
+        onPress={() => setIsExerciseGroupDetailModalVisible(true)}
       />
       <ExerciseGroupDetailModal
         isExerciseGroupDetailModalVisible={isExerciseGroupDetailModalVisible}
