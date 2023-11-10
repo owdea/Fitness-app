@@ -1,11 +1,11 @@
 import {Button, Modal, Text, View} from 'react-native';
 import * as React from 'react';
 
-function RateWorkoutModal(props: any) {
+function ExerciseGroupDetailModal(props: any) {
   return (
     <Modal
-      visible={props.isRateWorkoutModalVisible}
-      onRequestClose={() => props.setIsRateWorkoutModalVisible(false)}
+      visible={props.isExerciseGroupDetailModalVisible}
+      onRequestClose={() => props.setIsExerciseGroupDetailModalVisible(false)}
       animationType="slide"
       presentationStyle="pageSheet">
       <View
@@ -14,13 +14,14 @@ function RateWorkoutModal(props: any) {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <Text>Rate your workout!</Text>
+        <Text>Exercise group details</Text>
         <Button
           title="close"
-          onPress={() => props.setIsRateWorkoutModalVisible(false)}
+          onPress={() => props.setIsExerciseGroupDetailModalVisible(false)}
         />
       </View>
     </Modal>
   );
 }
-export default RateWorkoutModal;
+
+export default ExerciseGroupDetailModal;

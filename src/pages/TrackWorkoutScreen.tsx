@@ -14,20 +14,20 @@ function TrackWorkoutScreen() {
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Track Workout page</Text>
       <Button
-        title="Track workout"
-        onPress={() => setIsRateWorkoutModalVisible(true)}
+        title="Add new exercise"
+        onPress={() => setIsTrackWorkoutModalVisible(true)}
       />
       <Button
         title="Finish workout"
-        onPress={() => setIsTrackWorkoutModalVisible(true)}
+        onPress={() => setIsRateWorkoutModalVisible(true)}
       />
       <TrackWorkoutModal
-        isModalVisible={isRateWorkoutModalVisible}
-        setIsModalVisible={setIsRateWorkoutModalVisible}
+        isTrackWorkoutModalVisible={isTrackWorkoutModalVisible}
+        setIsTrackWorkoutModalVisible={setIsTrackWorkoutModalVisible}
       />
       <RateWorkoutModal
-        isModalVisible={isTrackWorkoutModalVisible}
-        setIsModalVisible={setIsTrackWorkoutModalVisible}
+        isRateWorkoutModalVisible={isRateWorkoutModalVisible}
+        setIsRateWorkoutModalVisible={setIsRateWorkoutModalVisible}
       />
     </View>
   );

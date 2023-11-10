@@ -4,8 +4,8 @@ import * as React from 'react';
 function TrackWorkoutModal(props: any) {
   return (
     <Modal
-      visible={props.isModalVisible}
-      onRequestClose={() => props.setIsModalVisible(false)}
+      visible={props.isTrackWorkoutModalVisible}
+      onRequestClose={() => props.setIsTrackWorkoutModalVisible(false)}
       animationType="slide"
       presentationStyle="pageSheet">
       <View
@@ -15,7 +15,10 @@ function TrackWorkoutModal(props: any) {
           justifyContent: 'center',
         }}>
         <Text>Enter your workout here</Text>
-        <Button title="close" onPress={() => props.setIsModalVisible(false)} />
+        <Button
+          title="close"
+          onPress={() => props.setIsTrackWorkoutModalVisible(false)}
+        />
       </View>
     </Modal>
   );
