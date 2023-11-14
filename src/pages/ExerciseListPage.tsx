@@ -14,7 +14,7 @@ function ExerciseListPage() {
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Exercise List Page</Text>
       <Button
-        title="Create new workout"
+        title="Create new exercise"
         onPress={() => setIsCreateNewExerciseModalVisible(true)}
       />
       <Button

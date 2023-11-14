@@ -1,48 +1,24 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {Button, View, Text} from 'react-native';
-import {useState} from 'react';
-import CreateNewExerciseGroupModal from '../modules/ExerciseGroups/components/CreateNewExerciseGroupModal';
-import ExerciseGroupDetailModal from '../modules/ExerciseGroups/components/ExerciseGroupDetailModal';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import ExerciseGroupStack from '../modules/ExerciseGroups/components/ExerciseGroupStack';
+import CreateNewExerciseGroupStack from '../modules/ExerciseGroups/components/CreateNewExerciseGroupStack';
 
+const Stack = createNativeStackNavigator();
 function ExerciseGroupPage() {
-  const [
-    isCreateNewExerciseGroupModalVisible,
-    setIsCreateNewExerciseGroupModalVisible,
-  ] = useState(false);
-  const [
-    isExerciseGroupDetailModalVisible,
-    setIsExerciseGroupDetailModalVisible,
-  ] = useState(false);
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Exercise Group Page</Text>
-      <Text>TODO: rozklikávací rozklikávací bloky</Text>
-      {/*Create new group section*/}
-      <Button
-        title="Create new exercise group"
-        onPress={() => setIsCreateNewExerciseGroupModalVisible(true)}
+    <Stack.Navigator initialRouteName="ExerciseGroupStack">
+      <Stack.Screen
+        name="ExerciseGroupStack"
+        component={ExerciseGroupStack}
+        options={{title: 'ExerciseGroupStack'}}
       />
-      <CreateNewExerciseGroupModal
-        isCreateNewExerciseGroupModalVisible={
-          isCreateNewExerciseGroupModalVisible
-        }
-        setIsCreateNewExerciseGroupModalVisible={
-          setIsCreateNewExerciseGroupModalVisible
-        }
+      <Stack.Screen
+        name={'CreateNewExerciseGroupStack'}
+        component={CreateNewExerciseGroupStack}
+        options={{title: 'CreateNewExerciseGroupStack'}}
       />
-      {/*Open detail about exercise group section*/}
-      <Button
-        title="Open exercise group detail"
-        onPress={() => setIsExerciseGroupDetailModalVisible(true)}
-      />
-      <ExerciseGroupDetailModal
-        isExerciseGroupDetailModalVisible={isExerciseGroupDetailModalVisible}
-        setIsExerciseGroupDetailModalVisible={
-          setIsExerciseGroupDetailModalVisible
-        }
-      />
-    </View>
+    </Stack.Navigator>
   );
 }
 
