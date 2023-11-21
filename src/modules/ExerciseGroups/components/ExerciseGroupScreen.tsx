@@ -2,8 +2,13 @@ import {Button, Text, View} from 'react-native';
 import * as React from 'react';
 import ExerciseGroupDetailModal from './ExerciseGroupDetailModal';
 import {useState} from 'react';
-
-function ExerciseGroupStack({navigation}: any) {
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {StackParamList} from '../../../types';
+type ExerciseGroupScreenProps = NativeStackScreenProps<
+  StackParamList,
+  'ExerciseGroupScreen'
+>;
+function ExerciseGroupScreen(props: ExerciseGroupScreenProps) {
   const [
     isExerciseGroupDetailModalVisible,
     setIsExerciseGroupDetailModalVisible,
@@ -13,7 +18,9 @@ function ExerciseGroupStack({navigation}: any) {
       <Text>Exercise Group Stack</Text>
       <Button
         title="Create new exercise group"
-        onPress={() => navigation.navigate('CreateNewExerciseGroupStack')}
+        onPress={() =>
+          props.navigation.navigate('CreateNewExerciseGroupScreen')
+        }
       />
       <Button
         title="Open exercise group detail"
@@ -29,4 +36,4 @@ function ExerciseGroupStack({navigation}: any) {
   );
 }
 
-export default ExerciseGroupStack;
+export default ExerciseGroupScreen;

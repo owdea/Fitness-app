@@ -1,22 +1,24 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import ExerciseGroupStack from '../modules/ExerciseGroups/components/ExerciseGroupStack';
-import CreateNewExerciseGroupStack from '../modules/ExerciseGroups/components/CreateNewExerciseGroupStack';
+import ExerciseGroupScreen from '../modules/ExerciseGroups/components/ExerciseGroupScreen';
+import CreateNewExerciseGroupScreen from '../modules/ExerciseGroups/components/CreateNewExerciseGroupScreen';
+import {StackParamList} from '../types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<StackParamList>();
+
 function ExerciseGroupPage() {
   return (
-    <Stack.Navigator initialRouteName="ExerciseGroupStack">
+    <Stack.Navigator initialRouteName="ExerciseGroupScreen">
       <Stack.Screen
-        name="ExerciseGroupStack"
-        component={ExerciseGroupStack}
-        options={{title: 'ExerciseGroupStack'}}
+        name="ExerciseGroupScreen"
+        component={ExerciseGroupScreen}
+        options={{title: 'ExerciseGroupScreen'}}
       />
       <Stack.Screen
-        name={'CreateNewExerciseGroupStack'}
-        component={CreateNewExerciseGroupStack}
-        options={{title: 'CreateNewExerciseGroupStack'}}
+        name={'CreateNewExerciseGroupScreen'}
+        component={CreateNewExerciseGroupScreen}
+        options={{title: 'CreateNewExerciseGroupScreen'}}
       />
     </Stack.Navigator>
   );
