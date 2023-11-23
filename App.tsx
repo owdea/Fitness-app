@@ -8,6 +8,7 @@ import ExerciseGroupPage from './src/pages/ExerciseGroupPage';
 import ExerciseListPage from './src/pages/ExerciseListPage';
 import CalendarPage from './src/pages/CalendarPage';
 import {Routes} from './src/router/routes';
+import Module02Page from './src/pages/Module02Page';
 
 const Drawer = createDrawerNavigator();
 
@@ -29,6 +30,7 @@ export default function App() {
           component={ExerciseListPage}
         />
         <Drawer.Screen name={Routes.Calendar} component={CalendarPage} />
+        <Drawer.Screen name={Routes.Module02Page} component={Module02Page} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
