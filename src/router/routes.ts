@@ -5,4 +5,5 @@ export enum Routes {
   List_of_exercises = 'ListOfExercises',
   Calendar = 'Calendar',
   Module02Page = 'Module02Page',
+  MapTestPage = 'MapTestPage',
 }

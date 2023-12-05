@@ -9,13 +9,14 @@ import ExerciseListPage from './src/pages/ExerciseListPage';
 import CalendarPage from './src/pages/CalendarPage';
 import {Routes} from './src/router/routes';
 import Module02Page from './src/pages/Module02Page';
+import MapTestPage from './src/pages/MapTestPage';
 
 const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator initialRouteName="Module02Page">
         <Drawer.Screen name={Routes.Home} component={HomeScreen} />
         <Drawer.Screen
           name={Routes.Track_workout}
