@@ -32,6 +32,7 @@ export default function App() {
         />
         <Drawer.Screen name={Routes.Calendar} component={CalendarPage} />
         <Drawer.Screen name={Routes.Module02Page} component={Module02Page} />
+        <Drawer.Screen name={Routes.MapTestPage} component={MapTestPage} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
