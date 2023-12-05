@@ -1,18 +1,26 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Button} from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps'; // remove PROVIDER_GOOGLE import if not using Google Maps
 
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFillObject,
-    height: '80%',
-    width: '100%',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+    flex: 1,
+  },
+  mapView: {
+    flex: 1,
   },
   map: {
-    ...StyleSheet.absoluteFillObject,
+    flex: 0.9,
+  },
+  buttons: {
+    flex: 0.1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
+    padding: 10,
   },
 });
 
@@ -23,13 +31,20 @@ let region = {
   longitudeDelta: 0.0121,
 };
 function MapTestPage() {
+  // @ts-ignore
   return (
     <View style={styles.container}>
-      <MapView
-        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-        style={styles.map}
-        region={region}
-      />
+      <View style={styles.map}>
+        <MapView
+          provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+          style={styles.mapView}
+          region={region}
+        />
+      </View>
+      <View style={styles.buttons}>
+        <Button title={'button1'} />
+        <Button title={'Button2'} />
+      </View>
     </View>
   );
 }
