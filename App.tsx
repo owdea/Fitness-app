@@ -16,7 +16,7 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Module02Page">
+      <Drawer.Navigator initialRouteName="MapTestPage">
         <Drawer.Screen name={Routes.Home} component={HomeScreen} />
         <Drawer.Screen
           name={Routes.Track_workout}

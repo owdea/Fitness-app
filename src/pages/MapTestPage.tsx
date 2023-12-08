@@ -21,12 +21,6 @@ const styles = StyleSheet.create({
   },
 });
 
-let region = {
-  latitude: 48.97406661069083,
-  longitude: 14.472992967998712,
-  latitudeDelta: 0.015,
-  longitudeDelta: 0.0121,
-};
 function MapTestPage() {
   // @ts-ignore
   return (
@@ -35,7 +29,12 @@ function MapTestPage() {
         <MapView
           provider={PROVIDER_GOOGLE} // remove if not using Google Maps
           style={styles.mapView}
-          region={region}>
+          initialRegion={{
+            latitude: 48.97406661069083,
+            longitude: 14.472992967998712,
+            latitudeDelta: 0.015,
+            longitudeDelta: 0.0121,
+          }}>
           <Marker
             coordinate={{
               latitude: 48.97406661069083,

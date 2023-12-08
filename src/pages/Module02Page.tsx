@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
 function Module02Page() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>HomePage</Text>
       <Image
         source={require('../assets/argo-pfp.png')}
         style={styles.tinyLogo}
