@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 });
 function MapTestPage() {
   const DEFAULT_PADDING = {
-    top: 20,
+    top: 20000,
     right: 20000,
     bottom: 20000,
     left: 20000,
@@ -39,7 +39,6 @@ function MapTestPage() {
       edgePadding: DEFAULT_PADDING,
     });
   }
-
   return (
     <View style={styles.container}>
       <View style={styles.map}>
@@ -65,7 +64,7 @@ function MapTestPage() {
       </View>
       <View style={styles.buttons}>
         <Button title={'Locate ARGO22'} onPress={fitARGOMarker} />
-        <Button title={'Locate me'} onPress={createUserMarker} />
+        <Button title={'Button2'} />
       </View>
     </View>
   );
