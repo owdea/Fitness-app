@@ -3,7 +3,14 @@
 <plist version="1.0">
 <dict>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Your app needs access to your location to provide you with the best possible experience.</string>
+    <string>Let me use your location, even in background</string>
+    <key>NSLocationTemporaryUsageDescriptionDictionary</key>
+    <dict>
+    	<key>full-accuracy</key>
+    	<string>Let me use your precise location temporarily</string>
+    </dict>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Let me use your location when the app is opened</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
