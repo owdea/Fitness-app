@@ -10,7 +10,6 @@ import CalendarPage from './src/pages/CalendarPage';
 import {Routes} from './src/router/routes';
 import Module02Page from './src/pages/Module02Page';
 import MapTestPage from './src/pages/MapTestPage';
-import PermissionTest from './src/pages/PermissionTest';
 
 const Drawer = createDrawerNavigator();
 
@@ -33,11 +32,7 @@ export default function App() {
         />
         <Drawer.Screen name={Routes.Calendar} component={CalendarPage} />
         <Drawer.Screen name={Routes.Module02Page} component={Module02Page} />
-        <Drawer.Screen name={Routes.MapTestPage} component={MapTestPage} />
-        <Drawer.Screen
-          name={Routes.PermissionTest}
-          component={PermissionTest}
-        />
+        <Drawer.Screen name={Routes.MapPage} component={MapTestPage} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
