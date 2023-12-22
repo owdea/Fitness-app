@@ -52,3 +52,28 @@ function Module02Page() {
 }
 
 export default Module02Page;
+
+/*function Module02Page() {
+  interface OpenURLButtonProps {
+    url: string;
+    title: string;
+  }
+  const OpenURLButton = ({url, title}: OpenURLButtonProps) => {
+    const handlePress = useCallback(async () => {
+      // Checking if the link is supported for links with custom URL scheme.
+      const supported = await Linking.canOpenURL(url);
+
+      if (supported) {
+        // Opening the link with some app, if the URL scheme is "http" the web link should be opened
+        // by some browser in the mobile
+        await Linking.openURL(url);
+      } else {
+        Alert.alert(`Don't know how to open this URL: ${url}`);
+      }
+    }, [url]);
+
+    return <Button title={title} onPress={handlePress} />;
+  };
+  implementace:
+<OpenURLButton url="mailto:ondrej.pelcl@argo22.com" text="Mail me"/>
+  */
