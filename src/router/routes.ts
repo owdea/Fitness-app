@@ -6,4 +6,5 @@ export enum Routes {
   Calendar = 'Calendar',
   Module02Page = 'Module02Page',
   MapPage = 'MapPage',
+  ProfilePage = 'ProfilePage',
 }
